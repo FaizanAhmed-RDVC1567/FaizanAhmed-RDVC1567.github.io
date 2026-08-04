@@ -40,6 +40,13 @@ section {
     margin-bottom: 20px;
 };
 
+.project a {
+    /* This is to make the hyperlink tag behave like a paragraph and respect the margins*/
+    display: inline-block; /* or block */
+    margin-top: 5px;
+    margin-bottom: 20px;   /* adds space below the link */
+};
+
 footer {
     text-align: center;
     padding: 20px;
