@@ -45,10 +45,10 @@ p {
 }
 
 section {
-    padding: 20px;
+    padding: 30px;
     background: white;
-    margin: 20px auto;
-    max-width: 800px;
+    margin: 20px 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     border-radius: 8px;
 }
 
