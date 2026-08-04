@@ -6,6 +6,11 @@ body {
     color: #222;
 }
 
+@media (max-width: 600px) {
+    header h1 { font-size: 2rem; }
+    section { padding: 20px; }
+}
+
 header {
     padding: 80px 20px;
     text-align: center;
