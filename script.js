@@ -25,4 +25,9 @@ document.addEventListener("DOMContentLoaded", () => {
 			return;
 		}
 	});
+
+	const linkedinBtn = document.getElementById("linkedInBtn");
+	linkedinBtn.addEventListener("click", () => {
+		window.location.href = "https://linkedin.com/in/faizan-ahmed-a5568122b";
+	});
 });
