@@ -2,8 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
 	const form = document.querySelector("form");
 
 	form.addEventListener("submit", (event) => {
-		const emailField = document.querySelector("");
-		const messageField = document.querySelector("");
+		const emailField = document.getElementById("email");
+		const messageField = document.getElementById("message");
 		const honeypot = document.querySelector("input[name='hFi']");
 
 		// simple validation
