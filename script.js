@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			event.preventDefault();
 			return;
 		}
-		form.reset();
+		//form.reset();
 	});
 
 	const linkedinBtn = document.getElementById("linkedinBtn");
