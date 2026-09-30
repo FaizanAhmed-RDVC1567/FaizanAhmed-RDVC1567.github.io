@@ -1,30 +1,23 @@
 document.addEventListener("DOMContentLoaded", () => {
 	const form = document.querySelector("form");
 
-	form.addEventListener("submit", (event) => {
-		const emailField = document.getElementById("email");
-		const messageField = document.getElementById("message");
-		const honeypot = document.querySelector("input[name='hFi']");
+	form.addEventListener("submit", async (event) => {
+		event.preventDefault();  // stop default browser submission
 
-		// simple validation
-		if (!emailField.value.includes("@")) {
-			alert("Please enter a valid email address.");
-			event.preventDefault();
-			return;
-		}
+		const formData = new FormData(form);
+		const response = await fetch(form.action, {
+			method: form.method,
+			body: formData,
+			headers: { Accept: "application/json" }
+		});
 
-		if (messageField.value.trim() === "") {
-			alert("Message cannot be empty.");
-			event.preventDefault();
-			return;
+		if (response.ok) {
+			alert("Message sent successfully!");
+			form.reset();
+		} else {
+			alert("Oops! Something went wrong.")
+			console.log(response);
 		}
-
-		if (honeypot.value !== "") {
-			alert("Bot detected. Submission blocked.");
-			event.preventDefault();
-			return;
-		}
-		//form.reset();
 	});
 
 	const linkedinBtn = document.getElementById("linkedinBtn");
