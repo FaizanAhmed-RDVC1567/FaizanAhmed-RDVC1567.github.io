@@ -56,9 +56,26 @@
 
     <section>
         <h2>Contact</h2>
-        <p><a href="mailto:chfaizan.510@outlook.com">Email Me</a></p>
+        
+        <form action="https://formspree.io/f/xoevrddn" method="POST">
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="_replyto" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <input type="text" name="hFi" style="display:none">
+            
+            <button type="submit">Send Message</button>
+        </form>
+        
         <p><a href="https://github.com/FaizanAhmed-RDVC1567" target="_blank" rel="noopener noreferrer">GitHub</a></p>
-        <p><a href="https://linkedin.com/in/faizan-ahmed-a5568122b" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+        
+        <p>
+            <button onclick="window.location.href='https://linkedin.com/in/faizan-ahmed-a5568122b';">
+                Connect on LinkedIn
+            </button>
+        </p>
     </section> 
     <!-- The 'noopener noreferrer' is security best practice, to protect site's
      performance and user data -->
